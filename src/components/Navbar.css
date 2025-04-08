@@ -1,0 +1,25 @@
+/* filepath: c:\Users\kpv33\netflixclone\src\components\Navbar.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+.navbar__logo {
+  color: #e50914;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar__avatar {
+  height: 30px;
+  cursor: pointer;
+}

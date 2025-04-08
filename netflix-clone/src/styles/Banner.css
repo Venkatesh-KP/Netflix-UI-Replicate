@@ -1,0 +1,36 @@
+.banner {
+  position: relative;
+  height: 400px;
+  color: white;
+  object-fit: contain;
+  background-size: cover;
+  background-position: center center;
+}
+
+.banner__contents {
+  position: absolute;
+  bottom: 60px;
+  left: 30px;
+  padding: 20px;
+  z-index: 1;
+}
+
+.banner__title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.banner__description {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  max-width: 500px;
+}
+
+.banner--fadeBottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);
+}
