@@ -4,6 +4,9 @@ import Login from './components/Login';
 import movies from './api/request';
 import './styles/App.css';
 
+import { Routes, Route } from 'react-router-dom';
+import MovieDetail from './components/MovieDetail';
+
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -17,13 +20,21 @@ function App() {
 
   return (
     <div className="App">
-      <Row title="Trending Now" movies={movies} />
-      <Row title="Top Picks" movies={movies} />
-      <Row title="New Releases" movies={movies} />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Row title="Trending Now" movies={movies} />
+              <Row title="Top Picks" movies={movies} />
+              <Row title="New Releases" movies={movies} />
+            </>
+          }
+        />
+        <Route path="/movie/:id" element={<MovieDetail />} />
+      </Routes>
     </div>
   );
 }
 
 export default App;
-// Additional rows can be added here if needed
-<Row title="Popular Movies" movies={movies} />
